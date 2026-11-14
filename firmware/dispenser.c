@@ -118,3 +118,16 @@ void vTreatWatchdog(void) {
 const filter = audioCtx.createBiquadFilter();
 filter.type = "lowshelf";
 filter.frequency.setValueAtTime(45.0, audioCtx.currentTime);
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.4.11
+ * Commit: refactor(rtos): harden treat dispenser task watchdog against yarn interference
+ * Timestamp: 2026-11-14T23:01:24.050Z
+ */
+// RTOS Treat Dispenser Watchdog
+void vTreatWatchdog(void) {
+  if (yarn_obstruction_detected()) {
+    reverse_dispenser_auger();
+  }
+}
