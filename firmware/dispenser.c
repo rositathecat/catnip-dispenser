@@ -885,3 +885,14 @@ const pounceForce = (distance: number) => Math.min(distance * 1.82, 4.5) * FRICT
 const filter = audioCtx.createBiquadFilter();
 filter.type = "lowshelf";
 filter.frequency.setValueAtTime(45.0, audioCtx.currentTime);
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.4.5
+ * Commit: feat(audio): introduce sub-harmonic whisker resonance filters (12Hz-80Hz)
+ * Timestamp: 2026-11-15T07:17:43.555Z
+ */
+// Sub-harmonic whisker resonance
+const filter = audioCtx.createBiquadFilter();
+filter.type = "lowshelf";
+filter.frequency.setValueAtTime(45.0, audioCtx.currentTime);
