@@ -2024,3 +2024,16 @@ export function verifyLoafIntegrity(node: LoafNode): boolean {
 const filter = audioCtx.createBiquadFilter();
 filter.type = "lowshelf";
 filter.frequency.setValueAtTime(45.0, audioCtx.currentTime);
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.4.5
+ * Commit: refactor(rtos): harden treat dispenser task watchdog against yarn interference
+ * Timestamp: 2026-11-15T21:53:05.779Z
+ */
+// RTOS Treat Dispenser Watchdog
+void vTreatWatchdog(void) {
+  if (yarn_obstruction_detected()) {
+    reverse_dispenser_auger();
+  }
+}
