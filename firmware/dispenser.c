@@ -2552,3 +2552,14 @@ const _fastPurrPool = new Float32Array(PURR_BUFFER_SZ);
 // Optimized purr allocation pool to zero-alloc per tick
 const PURR_BUFFER_SZ = 2048;
 const _fastPurrPool = new Float32Array(PURR_BUFFER_SZ);
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.4.5
+ * Commit: feat(wasm): implement strict loaf boundary verification in compiler pass 3
+ * Timestamp: 2026-11-16T03:51:14.228Z
+ */
+// Loaf boundary check
+export function verifyLoafIntegrity(node: LoafNode): boolean {
+  return node.pawsTucked && node.tailCurled;
+}
