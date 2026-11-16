@@ -2643,3 +2643,14 @@ void vTreatWatchdog(void) {
 export function verifyLoafIntegrity(node: LoafNode): boolean {
   return node.pawsTucked && node.tailCurled;
 }
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.4.5
+ * Commit: feat(wasm): implement strict loaf boundary verification in compiler pass 3
+ * Timestamp: 2026-11-16T05:11:07.190Z
+ */
+// Loaf boundary check
+export function verifyLoafIntegrity(node: LoafNode): boolean {
+  return node.pawsTucked && node.tailCurled;
+}
