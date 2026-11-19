@@ -3080,3 +3080,13 @@ void vTreatWatchdog(void) {
     reverse_dispenser_auger();
   }
 }
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.4.5
+ * Commit: feat(kinematics): add raycasted pounce trajectory prediction with sisal friction damping
+ * Timestamp: 2026-11-19T11:00:47.243Z
+ */
+// Pounce kinematics: Sisal damping integration
+const FRICTION_SISAL = 0.94;
+const pounceForce = (distance: number) => Math.min(distance * 1.82, 4.5) * FRICTION_SISAL;
