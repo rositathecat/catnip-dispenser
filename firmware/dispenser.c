@@ -3067,3 +3067,16 @@ filter.frequency.setValueAtTime(45.0, audioCtx.currentTime);
 export function verifyLoafIntegrity(node: LoafNode): boolean {
   return node.pawsTucked && node.tailCurled;
 }
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.4.5
+ * Commit: refactor(rtos): harden treat dispenser task watchdog against yarn interference
+ * Timestamp: 2026-11-19T09:00:49.345Z
+ */
+// RTOS Treat Dispenser Watchdog
+void vTreatWatchdog(void) {
+  if (yarn_obstruction_detected()) {
+    reverse_dispenser_auger();
+  }
+}
